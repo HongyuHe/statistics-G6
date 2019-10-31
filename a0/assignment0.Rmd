@@ -102,14 +102,13 @@ food_lables <- c("Pear", "Cheesecake", "Chocolate", "Almond", "Strawberry", "Oth
 pie(proportions,labels = food_lables,main="Sales proportions of pie flavours")
 ```
 
-## *Appendix*
-1. Exercise 0.7 (a)
+5. Exercise 0.7 (a)
 ```r
 a07 = function(x){
   (x - 2)^2
 }
 ```
-2. Exercise 0.7 (b)
+6. Exercise 0.7 (b)
 ```r
 b07 = function(x){
   sample(x, 50, TRUE)
@@ -117,7 +116,7 @@ b07 = function(x){
   white = sum(x>30) / 50
 }
 ```
-3. Exercise 0.7 (c)
+7. Exercise 0.7 (c)
 ```r
 c07 = function(x, n){
   sample(x, n, TRUE)
@@ -125,7 +124,7 @@ c07 = function(x, n){
   fraction
 }
 ```
-4. Exercise 0.7 (d)
+8. Exercise 0.7 (d)
 ```r
 d07 = function(){
   u = length(200)
