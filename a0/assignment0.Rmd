@@ -101,3 +101,36 @@ proportions <- c(0.37,0.17,0.28,0.07,0.06,0.05)
 food_lables <- c("Pear", "Cheesecake", "Chocolate", "Almond", "Strawberry", "Other")
 pie(proportions,labels = food_lables,main="Sales proportions of pie flavours")
 ```
+
+## *Appendix*
+1. Exercise 0.7 (a)
+```r
+a07 = function(x){
+  (x - 2)^2
+}
+```
+2. Exercise 0.7 (b)
+```r
+b07 = function(x){
+  sample(x, 50, TRUE)
+  red = sum(x<=30) / 50
+  white = sum(x>30) / 50
+}
+```
+3. Exercise 0.7 (c)
+```r
+c07 = function(x, n){
+  sample(x, n, TRUE)
+  fraction = c(sum(x<=mr) / n, sum(x>wr) / n)
+  fraction
+}
+```
+4. Exercise 0.7 (d)
+```r
+d07 = function(){
+  u = length(200)
+  for(i in 1:200) {
+    u[i] = median(sample(1:90, 40, TRUE))
+  }
+}
+```
