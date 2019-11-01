@@ -53,7 +53,8 @@ load("Ass0.RData")
 barplot(
   table(school), 
   col = c("blue","green","black","yellow"),
-  main = "Bar plot of \"school\" data"
+  main = "Bar plot of \"school\" data",
+  cex.names=0.7
 )
 ```
 
@@ -80,8 +81,7 @@ a07 = function(x){
 b07 = function(){
   takenSample = sample(1:100, 50, TRUE)
   nrPerColour = numeric(2)
-  nrPerColour = c(sum(takenSample <= 30) / 50,
-                  sum(takenSample >  30) / 50)
+  nrPerColour = c(sum(takenSample <= 30) / 50, sum(takenSample >  30) / 50)
   nrPerColour
 }
 // (c)
@@ -113,8 +113,7 @@ dimnames(sample1_data) <- list(list("a","b","c", "d"), list("I", "II", "III", "I
 hist(sample1_data, probability = T, breaks = 5,main = "Histogram of Sample 1")
 // (b)
 x  = seq(0, 2, 0.001)
-y1 = x^4 
-y2 = 5*x + 2
+y1 = x^4; y2 = 5*x + 2
 plot(x, y1, col = "blue", type = "l",main = "Plot for y1(x) and y2(x)",xlab = "x",ylab = "y")
 lines(x, y2, col="red",  type = "l", lty = 2)
 legend(0, 15,legend=c("y1 = x^4", "y2 = 5*x + 2"),col=c("blue", "red"), lty=1:2, cex=0.8)
