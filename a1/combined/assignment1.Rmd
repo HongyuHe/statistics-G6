@@ -4,7 +4,7 @@ author: "Hongyu He (2632195) & Bruno Hoevelaken (2645065)"
 date: "Group CS 6"
 output: pdf_document
 ---
-## Theoretical Exercises
+## & Theoretical Exercises
 ### Exercise 1.1
 1. (Section 1.2 E10)
 The sampling method used in this scenario is **flawed**. *The book clearly states* (p7) **that internet polls**, in which people online can decide whether to respond, **are by their very nature seriously flawed**, as they result in **voluntary response samples**. This also means **nonresponses** might have occuered. This would  result in **missing data** regarding individuals who were unwilling to participate in the online poll. Due to the missing data, we are unable extrapolate any meaningful conclusions out of this sample, regarding the wider populous. For a voluntary response sample, we can draw valid conclusions only about the specific group of people who chose to participate. From a statistical viewpoint, such a method is fundamentally flawed and should not be used for making general statements about a large population.
@@ -22,7 +22,7 @@ The result, therefore, is most likely to be *incorrect*.
 Depths (km) of earthquakes are at the **ratio** level of measurement because the depths (km) of earthquakes measured relative to the earth's crust(s), which means there is a meaningful **natural zero starting point**.
 
 2. (Section 1.3 E32)
-The lineup numbers exist as distinguishing features, each corresponding to a player. This means that they fall under the **nominal** level of measurement. So *calculating their mean is pointless*.
+The lineup numbers exist as distinguishing features, each corresponding to a player. This means that they fall under the **nominal** level of measurement. Thus, calculating their mean is pointless.
 
 ### Exercise 1.3
 1. (Section 1.4 E6)
@@ -41,11 +41,11 @@ In this case, the sampling method used by ABC News should be **cluster sampling*
 - the bars are not in the same width.
 
 #### b. 
-1. Since the analysed data are at the nominal level of measurement, I think both **Pareto chart** and **pie chart** are good choices for illustrating the distribution of the food preference. In addition, the relative frequencies are needed to be calculated first for making a pie chart.
+1. Since the analysed data are at the *nominal level of measurement*, we think both **Pareto chart** and **pie chart** are good choices for illustrating the distribution of the food preference. In addition, the *relative frequencies* are needed to be calculated first for making a pie chart.
 
-2. Due to the measured data are at the ratio level of measurement, I think both **histogram** and **boxplot** are illegible for this case.  
+2. Due to the measured data are at the *ratio level of measurement*, we think both **histogram** and **boxplot** are illegible for showing the distribution of the numbers of previously done votes.  
 
-## R-exercises
+## & R-exercises
 ### Exercise 1.5
 #### a. 
 ```{r echo=FALSE, out.width = '50%', out.height = '40%'}
@@ -82,12 +82,12 @@ library(knitr)
 
 ### c.
 - As we can see from the two diagrams, the data is **right-skewed**;
-- Since the data is quite right-skewed, the **accumulation** is relatively low;
-- Clearly, this data is **unimodal (mode/peak is around 0.8)** and not **symmetric**;
-- Based on the **median** value, the **location** of the data is around 2; 
+- Since the data is quite right-skewed, so the trend of the **cumulation** should be relatively low;
+- Clearly, the data distributiion is **unimodal (mode/peak is around 0.8)** and not **symmetric**;
+- Based on the **median** value, the **location** of the distribution is around 2; 
 - The **range** of the data is 8.5560 - 0.1087 = 8.4472;
 - There is one **extreme** value (**outlier**) which is 8.5560;
-- Comparing the mean and standard deviation value, the **variation** of the data is quite big.
+- Comparing the (sample) mean and standard deviation, the **variation** of the distribution is quite big.
 
 ### d. Plots and Numerical summaries for *sampleB*
 
@@ -110,16 +110,16 @@ boxplot(B_data, outlier.tagging = TRUE, col = "bisque", main = "Boxplot of sampl
 |:-----:|:--------------:|:--------:|:------:|:--------------:|:-----:|:---:|:---:|
 |0.01543 | 2.01700 | 2.82400 | 2.92900 | 3.87400 | 5.97900 | 1.7051 | 1.305795|
 
-- As we can see from the two diagrams, the data is **roughly symmetric**;
+- As we can see from the two diagrams, the distribution is **roughly symmetric**;
 - Compared to `A_data`, the **accumulation** of this data set is faster;
-- This data is **unimodal** (mode/peak is around 2.2);
+- The distribution is **unimodal** (mode/peak is around 2.2);
 - Based on the **median** value, the location of the data is around 2.5; 
 - The **range** of the data is 5.96357;
 - There is no **extreme** value (**outlier**);
-- Comparing the mean and (sample) standard deviation value, the **variation** of the data is relatively small.
+- Comparing the (sample) mean and standard deviation, the **variation** of the distribution is relatively small.
 
 ### e. 
-  According to the previous analyses on the two data sets, none of the characteristics (shape, accumulation, mode, location, range, outliers, variation) of them are alike. Therefore, I strongly convinced that they are not originated from the same population distribution.
+  According to the previous analyses on the two data sets, none of the characteristics (shape, mode, location, range, outliers, variation) of them are quite alike. Therefore, we strongly convinced that they are highly unlikely originated from the same population distribution.
 
 
 ## Exercise 1.6
@@ -136,26 +136,26 @@ boxplot(mpg1[cyl1==8], mpg2[cyl1==8], ylim = range(10:40), names = c("Type1", "T
 
 ```
 
-- 4 Cylinders:
+- Numerical summary of cars wtih 4 cylinders:
 
-|Type|Min. | 1st Quartile | Median | Mean | 3rd Quartile | Max. |
-|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-|Type1| 21.50 | 27.45 | 30.50 | 30.02 | 32.70 |
-|Type2| 21.40 | 22.80 | 26.00 | 26.66 | 30.40 |
+|**#**|**Min.** | **1st Quartile** | **Median** | **Mean** | **3rd Quartile** | **Max.** |
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|**Type1**| 21.50 | 27.45 | 30.50 | 30.02 | 32.70 |37.30 |
+|**Type2**| 21.40 | 22.80 | 26.00 | 26.66 | 30.40 |33.90|
 
-- 6 Cylinders:
+- Numerical summary of cars wtih 6 cylinders:
 
-|Type|Min. | 1st Quartile | Median | Mean | 3rd Quartile | Max. |
-|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-| 15.50        | 17.75  | 22.00        | 24.25 | 29.65 | 37.30        |
-| 17.80        | 18.65  | 19.70        | 19.74 | 21.00 | 21.40        |
+|**#**|**Min.** | **1st Quartile** | **Median** | **Mean** | **3rd Quartile** | **Max.** |
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|**Type1**| 15.50        | 17.75  | 22.00        | 24.25 | 29.65 | 37.30        |
+|**Type2**| 17.80        | 18.65  | 19.70        | 19.74 | 21.00 | 21.40        |
 
-- 8 Cylinders:
+- Numerical summary of cars wtih 8 cylinders:
 
-|Type|Min. | 1st Quartile | Median | Mean | 3rd Quartile | Max. |
-|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-| 15.50        | 16.80  | 17.30        | 17.42 | 18.27 | 19.20        |
-| 10.40        | 14.40  | 15.20        | 15.10 | 16.25 | 19.20 |
+|**#**|**Min.** | **1st Quartile** | **Median** | **Mean** | **3rd Quartile** | **Max.** |
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+|**Type1**| 15.50        | 16.80  | 17.30        | 17.42 | 18.27 | 19.20        |
+|**Type2**| 10.40        | 14.40  | 15.20        | 15.10 | 16.25 | 19.20 |
 
 The 3 plots above compare the fuel usage of car type 1 & 2 under the same number of cylinders. As they illustrate, when the numbers of cylinders are 4 and 6, the type 2 cars are generally more fuel-efficient than type 1 cars, whilst for 8-cylinder cars, type 1 is more fuel-efficient than type 2.
 
@@ -171,7 +171,7 @@ boxplot(mpg2[cyl2==4], mpg2[cyl2==6], mpg2[cyl2==8], ylim = range(10:40), names 
 
 ```
 
-No, I think there indeed a risk to directly compare the data of both types of cars when including also the cars with more cylinders. As we can see from the two boxplots above, for both type 1 & 2, the cars with more cylinders are always more fuel-efficient than the ones with fewer cylinders.
+No, we think there indeed a risk to directly compare the data of both types of cars when including also the cars with more cylinders, in the sense that we are comparing two data sets with **heterogeneous variations** of characteristics. As we can see from the two boxplots above, for both type 1 & 2, the cars of the same type with more cylinders are always more fuel-efficient than the ones with fewer cylinders.
 
 
 ## ***Appendix***
@@ -218,10 +218,8 @@ boxplot(mpg1[cyl1==8], mpg2[cyl1==8], ylim = range(10:40), names = c("Type1", "T
 
 summary(mpg1[cyl1==4])
 summary(mpg2[cyl2==4])
-
 summary(mpg1[cyl2==6])
 summary(mpg2[cyl2==6])
-
 summary(mpg1[cyl1==8])
 summary(mpg2[cyl2==8])
 
