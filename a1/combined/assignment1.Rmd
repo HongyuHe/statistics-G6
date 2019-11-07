@@ -10,12 +10,10 @@ output: pdf_document
 The sampling method used in this scenario is **flawed**. *The book clearly states* (p7) **that internet polls**, in which people online can decide whether to respond, **are by their very nature seriously flawed**, as they result in **voluntary response samples**. This also means **nonresponses** might have occuered. This would  result in **missing data** regarding individuals who were unwilling to participate in the online poll. Due to the missing data, we are unable extrapolate any meaningful conclusions out of this sample, regarding the wider populous. For a voluntary response sample, we can draw valid conclusions only about the specific group of people who chose to participate. From a statistical viewpoint, such a method is fundamentally flawed and should not be used for making general statements about a large population.
 
 2. (Section 1.2 E12)
-In this case, the 1018 samples used by Gallup pollsters are *simple random samples* so the sampling method appears to be **sound**.
+In this case, the 1018 samples used by Gallup pollsters are *simple random samples* so the sampling method appears to be **sound**, assuming the subjects picked up and (willingly) participated in the survey.
 
 3. (Section 1.2 E26)
-We believe that the sampling method is **flawed**. Same as "Section 1.1 E10", the online poll uses *voluntary response samples* (or *self-selected samples*). Specifically, the *Internet poll* method is used in this survey. According to the book: *"By their very nature, all are seriously flawed because we should not make conclusions about a population on the basis of such a biased sample."*. 
-This exercise presents a scenario which suffers from the *same issue as exercise 10*, as it relies on an **internet poll**. Another issue is the fact that it is unclear what the other 59% of users said.
-The result, therefore, is most likely to be *incorrect*.
+We believe that the sampling method is **flawed**. The exercise presents a similar scenario to that of "Section 1.1 E10", the online poll uses *voluntary response samples* (or *self-selected samples*). Specifically, the *Internet poll* method is used in this survey. According to the book: *"By their very nature, all are seriously flawed because we should not make conclusions about a population on the basis of such a biased sample."*. Another issue is the fact that it is unclear what the other 59% of users said.
 
 ### Exercise 1.2
 1. (Section 1.3 E22) 
@@ -29,7 +27,7 @@ The lineup numbers exist as distinguishing features, each corresponding to a pla
 This should be an **experiment** since the researchers first applied some treatment to the subjects and then observed the effects on the experimental units.
 
 2. (Section 1.4 E12)
-The researcher used **systematic sampling** because every 5 meters, a sample was selected. 
+The researcher used **systematic sampling** because every 5 meters (interval), a sample was selected. 
 
 3. (Section 1.4 E18)
 In this case, the sampling method used by ABC News should be **cluster sampling** where the voters were (implicitly) divide into clusters (stations) and then those stations were randomly selected. Finally, all members (voters) of the selected clusters are chosen.
