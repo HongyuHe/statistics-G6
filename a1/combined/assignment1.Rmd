@@ -14,6 +14,7 @@ In this case, the 1018 samples used by Gallup pollsters are *simple random sampl
 
 3. (Section 1.2 E26)
 We believe that the sampling method is **flawed**. The exercise presents a similar scenario to that of "Section 1.1 E10", the online poll uses *voluntary response samples* (or *self-selected samples*). Specifically, the *Internet poll* method is used in this survey. According to the book: *"By their very nature, all are seriously flawed because we should not make conclusions about a population on the basis of such a biased sample."*. Another issue is the fact that it is unclear what the other 59% of users said.
+This exercise presents a scenario which suffers from the *same issue as exercise 10*, as it relies on an **internet poll**. Another issue is the fact that it is unclear what the other 59% of users said.	
 
 ### Exercise 1.2
 1. (Section 1.3 E22) 
@@ -24,10 +25,10 @@ The lineup numbers exist as distinguishing features, each corresponding to a pla
 
 ### Exercise 1.3
 1. (Section 1.4 E6)
-This should be an **experiment** since the researchers first applied some treatment to the subjects and then observed the effects on the experimental units.
+This should be an **experiment** since the researchers first applied some treatment to the subjects and then observed the effects on the **experimental units**.
 
 2. (Section 1.4 E12)
-The researcher used **systematic sampling** because every 5 meters (interval), a sample was selected. 
+The researcher used **systematic sampling** because every 5 meters *(interval)*, a sample was selected. 
 
 3. (Section 1.4 E18)
 In this case, the sampling method used by ABC News should be **cluster sampling** where the voters were (implicitly) divide into clusters (stations) and then those stations were randomly selected. Finally, all members (voters) of the selected clusters are chosen.
@@ -61,9 +62,9 @@ boxplot(A_data, outlier.tagging = TRUE, col = "darksalmon", main = "Boxplot of s
 
 ### b. Numerical summaries for *sampleA*
 
-|Min. | 1st Quartile | Median | Mean | 3rd Quartile | Max. | Variance | Standard deviaton|
+|**Min.** | **1st Quartile** | **Median** | **Mean** | **3rd Quartile** | **Max.** | **Variance** | **Standard deviaton**|
 |:-----:|:--------------:|:--------:|:------:|:--------------:|:-----:|:---:|:---:|
-|0.1087|  1.2170 | 2.4740 |  2.8300|  4.0360 | 8.5560 | 3.662593|1.91379|
+|0.109|  1.217 | 2.474 |  2.830|  4.036 | 8.556 | 3.663|1.914|
 
 ```{r echo=FALSE, out.width = '50%', out.height = '40%'}
 
@@ -83,8 +84,8 @@ library(knitr)
 - Since the data is quite right-skewed, so the trend of the **cumulation** should be relatively low;
 - Clearly, the data distributiion is **unimodal (mode/peak is around 0.8)** and not **symmetric**;
 - Based on the **median** value, the **location** of the distribution is around 2; 
-- The **range** of the data is 8.5560 - 0.1087 = 8.4472;
-- There is one **extreme** value (**outlier**) which is 8.5560;
+- The **range** of the data is 8.556 - 0.109 = 8.447;
+- There is one **extreme** value (**outlier**) which is 8.556;
 - Comparing the (sample) mean and standard deviation, the **variation** of the distribution is quite big.
 
 ### d. Plots and Numerical summaries for *sampleB*
@@ -104,15 +105,15 @@ boxplot(B_data, outlier.tagging = TRUE, col = "bisque", main = "Boxplot of sampl
 #sd(B_data)
 ```
 
-|Min. | 1st Quartile | Median | Mean | 3rd Quartile | Max. | Variance | Standard deviaton|
+|**Min.** | **1st Quartile** | **Median** | **Mean** | **3rd Quartile** | **Max.** | **Variance** | **Standard deviaton**|
 |:-----:|:--------------:|:--------:|:------:|:--------------:|:-----:|:---:|:---:|
-|0.01543 | 2.01700 | 2.82400 | 2.92900 | 3.87400 | 5.97900 | 1.7051 | 1.305795|
+|0.015 | 2.017 | 2.824 | 2.929 | 3.874 | 5.979 | 1.705 | 1.306|
 
 - As we can see from the two diagrams, the distribution is **roughly symmetric**;
 - Compared to `A_data`, the **accumulation** of this data set is faster;
 - The distribution is **unimodal** (mode/peak is around 2.2);
 - Based on the **median** value, the location of the data is around 2.5; 
-- The **range** of the data is 5.96357;
+- The **range** of the data is 5.963;
 - There is no **extreme** value (**outlier**);
 - Comparing the (sample) mean and standard deviation, the **variation** of the distribution is relatively small.
 
