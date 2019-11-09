@@ -1,0 +1,16 @@
+diffdice = function(n = 10)
+{ # This function simulates rolling 
+  # 2 dice n times, 
+  # calculates the absolute difference of both dice
+  # and returns a vector with n minimal values.
+  absdiff = numeric(n)
+  for(i in 1:n){
+    absdiff[i] = abs(diff(sample(6,2,replace=T)))
+  }
+  absdiff
+
+# alternatively, the command 
+# replicate(n, abs(diff(sample(6,2,replace=T))))
+# would avoid the for-loop & make the code more efficient...
+
+}
