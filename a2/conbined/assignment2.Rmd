@@ -43,7 +43,7 @@ P(disease\;\cap\;+) &= P(disease)\;\cdot\;P(+\;|\;disease) \\
                  &= 0.004\;\cdot\;0.95 \\
 \end{aligned}$
 
-is no the same as
+is not the same as
 
 $\begin{aligned}
 P(disease)\;\cdot\;P(+) &= 0.004\;\cdot\;0.054 \\ 
@@ -66,19 +66,19 @@ P(disease\;|\;+) = 0.071\;>\;P(disease) = 0.004 \\
 
 Because multiple rolls do not influence each other, we have 
 
-1)
+(1)
 
-$x_{1} = (1, 1);\;x_{2}\: = (1, 2);\;x_{3}\: = (1, 3);\;x_{4}\: = (1, 4);\;x_{5}\: = (1, 5);\;x_{6}\: = (1, 6);\;x_{7}\: = (1, 7);\;x_{8}\: = (1, 8);$
+    $x_{1} = (1, 1);\;x_{2}\: = (1, 2);\;x_{3}\: = (1, 3);\;x_{4}\: = (1, 4);\;x_{5}\: = (1, 5);\;x_{6}\: = (1, 6);\;x_{7}\: = (1, 7);\;x_{8}\: = (1, 8);$
 
-$x_{9} = (2, 1);\;x_{10} = (2, 2);\;x_{11} = (2, 3);\;x_{12} = (2, 4);\;x_{13} = (2, 5);\;x_{14} = (2, 6);\;x_{15} = (2, 7);\;x_{16} = (2, 8);$
+    $x_{9} = (2, 1);\;x_{10} = (2, 2);\;x_{11} = (2, 3);\;x_{12} = (2, 4);\;x_{13} = (2, 5);\;x_{14} = (2, 6);\;x_{15} = (2, 7);\;x_{16} = (2, 8);$
 
-$...$
+    $...$
 
-$x_{57} = (8, 1);\;x_{58} = (8, 2);\;x_{59} = (8, 3);\;x_{60} = (8, 4);\;x_{61} = (8, 5);\;x_{62} = (8, 6);\;x_{63} = (8, 7);\;x_{64} = (8, 8);$
+    $x_{57} = (8, 1);\;x_{58} = (8, 2);\;x_{59} = (8, 3);\;x_{60} = (8, 4);\;x_{61} = (8, 5);\;x_{62} = (8, 6);\;x_{63} = (8, 7);\;x_{64} = (8, 8);$
 
-  2)
+(2)
   
-$P(X=x_{1}) = P(X=x_{2}) =\;...\;= P(X=x_{64}) = \frac{1}{64}$
+    $P(X=x_{1}) = P(X=x_{2}) =\;...\;= P(X=x_{64}) = \frac{1}{64}$
 
 ### b)
 
@@ -94,15 +94,15 @@ $P(X=x_{1}) = P(X=x_{2}) =\;...\;= P(X=x_{64}) = \frac{1}{64}$
 
 ### c) 
 
-The expectation of the random variable **Y**: $E(Y) = 0 * \frac{49}{64} + 1 * \frac{7}{32} + 2 * \frac{1}{64} = \frac{1}{4}$
+  The expectation of the random variable **Y**: $E(Y) = 0 * \frac{49}{64} + 1 * \frac{7}{32} + 2 * \frac{1}{64} = \frac{1}{4}$
 
 ### d)
 
-*Proof*: $Var(Y) = 0^{2} * \frac{49}{64} + 1^{2} * \frac{7}{32} + 2^{2} * \frac{1}{64} - E(Y)^{2} = \frac{7}{32}$
+  *Proof*: $Var(Y) = 0^{2} * \frac{49}{64} + 1^{2} * \frac{7}{32} + 2^{2} * \frac{1}{64} - E(Y)^{2} = \frac{7}{32}$
 
-## e)
+### e)
 
-Since the sample size is much greater than 30, according to the **central limit theorem**, the random variables **$X_{i}$** approximately have a normal distribution with an expectation **$\mu$** of 1/4 and a standard deviation of **$\frac{\sigma}{\sqrt{n}}$**, which is $$N(\frac{1}{4}, \frac{7/32}{n})$$
+  Since the sample size is much greater than 30, according to the **central limit theorem**, the random variables **$X_{i}$** approximately have a normal distribution with an expectation **$\mu$** of 1/4 and a standard deviation of **$\frac{\sigma}{\sqrt{n}}$**, which is $$N(\frac{1}{4}, \frac{7/32}{n})$$
 
 
 
@@ -112,25 +112,25 @@ Since the sample size is much greater than 30, according to the **central limit 
 
 ### a)
 
-```{r echo=FALSE, out.width = '100%', out.height = '100%'}
+```{r echo=FALSE, fig.width=6, fig.height=6}
 # 2.3 a
 par(mfrow=c(2,2))
 # i)
 a = rt(150, 4)
 qqnorm(a, main = "i) Normal QQ plot of t-distribution", cex.main=0.7, col = "cornflowerblue")
-abline(mean(a), sd(a), col = "coral2")
+abline(mean(a), sd(a), col = "coral2", lwd=2)
 # ii)
 b = rnorm(100, -1, 6)
 qqnorm(b, main = "ii) Normal QQ plot of N(-1, 6) distribution", cex.main=0.7, col = "cornflowerblue")
-abline(mean(b), sd(b), col = "coral2")
+abline(mean(b), sd(b), col = "coral2", lwd=2)
 # iii)
 c = rchisq(170, 5)
 qqnorm(c, main = "iii) Normal QQ plot of chi-squared-distribution", cex.main=0.7, col = "cornflowerblue")
-abline(mean(c), sd(c), col = "coral2")
+abline(mean(c), sd(c), col = "coral2", lwd=2)
 # iv)
 d = runif(90, 4, 25)
 qqnorm(d, main = "iv) Normal QQ plot of uniform distribution", cex.main=0.7, col = "cornflowerblue")
-abline(mean(d), sd(d), col = "coral2")
+abline(mean(d), sd(d), col = "coral2", lwd=2)
 
 ```
 
@@ -159,9 +159,9 @@ mean_titanic=summary(ages)[4]
 
 # Add legends later
 hist(ages, breaks = 50, col = "blanchedalmond")
-qqnorm(ages, col = "darkgoldenrod1")
-qqline(ages, col = "red") 
-abline(as.numeric(mean_titanic), sd_titanic, col = "blue")
+qqnorm(ages, col = "darkgoldenrod3")
+qqline(ages, col = "red", lwd=2) 
+abline(as.numeric(mean_titanic), sd_titanic, col = "blue", lwd=2)
 
 boxplot(ages, col = "blanchedalmond", main = "Boxplot of ages")
 ```
@@ -193,9 +193,9 @@ sd_chol=sd(chol, na.rm=TRUE)
 mean_chol=summary(chol)[4]
 
 hist(chol, breaks =50, col = "blanchedalmond")
-qqnorm(chol, col = "darkgoldenrod1")
-qqline(chol, col = "red") 
-abline(as.numeric(mean_chol), sd_chol, col = "blue")
+qqnorm(chol, col = "darkgoldenrod3")
+qqline(chol, col = "red", lwd=2) 
+abline(as.numeric(mean_chol), sd_chol, col = "blue", lwd=2)
 
 boxplot(chol, col = "blanchedalmond", main = "Boxplot of chol")
 ```
@@ -227,9 +227,9 @@ sd_bwt=sd(bwt, na.rm=TRUE)
 mean_bwt=summary(bwt)[4]
 
 hist(bwt, breaks = 30, ylim = c(0, 50), col = "blanchedalmond")
-qqnorm(bwt, col = "darkgoldenrod1")
-qqline(bwt, col = "red")
-abline(as.numeric(mean_bwt), sd_bwt, col = "blue")
+qqnorm(bwt, col = "darkgoldenrod3")
+qqline(bwt, col = "red", lwd=2)
+abline(as.numeric(mean_bwt), sd_bwt, col = "blue", lwd=2)
 
 boxplot(bwt, col = "blanchedalmond", main = "Boxplot of bwt")
 ```
@@ -283,15 +283,6 @@ text(850,2.5, paste0("Expected absolute difference=", 1.944), col = "brown1")
 
 (1)
 
-| **#** | **outcome** | **frequency** |
-|:-:|:-------:|:---------:|
-| 1 | 0 | 168 |
-| 2 | 1 | 260 |
-| 3 | 2 | 219 |
-| 4 | 3 | 190 |
-| 5 | 4 | 112 |
-| 6 | 5 | 51 |
-
 ```r
 source("function02.txt")
 num_trails = 1000
@@ -306,6 +297,15 @@ for (x_i in 1:6) {
   E
 }
 ```
+
+| **#** | **outcome** | **frequency** |
+|:-:|:-------:|:---------:|
+| 1 | 0 | 168 |
+| 2 | 1 | 260 |
+| 3 | 2 | 219 |
+| 4 | 3 | 190 |
+| 5 | 4 | 112 |
+| 6 | 5 | 51 |
 
   Using the function `diffdice` and above code, we found an approximate value of expectation **`E`** of the random variable ‘the absolute difference of two die rolls’ : **1.971**
 
@@ -376,26 +376,26 @@ lines(x, y, type="l", lwd=2, col = "red")
 
   The blue lines of figures in c) represent empirical distributions and the red lines are the normal distribution. As these plots demonstrate, those two lines gradually merge together as the sample size become larger. The shape of the histogram also increasingly adheres to the shape of the normal distribution.  In other words, the distribution of the sample means steadily move toward a normal distribution as the sample size goes larger.  
 
-# Appendix
+# *Appendix*
 ```r
 # 2.3 a
 par(mfrow=c(2,2))
 # i)
 a = rt(150, 4)
 qqnorm(a, main = "i) Normal QQ plot of t-distribution", cex.main=0.7, col = "cornflowerblue")
-abline(mean(a), sd(a), col = "coral2")
+abline(mean(a), sd(a), col = "coral2", lwd=2)
 # ii)
 b = rnorm(100, -1, 6)
 qqnorm(b, main = "ii) Normal QQ plot of N(-1, 6) distribution", cex.main=0.7, col = "cornflowerblue")
-abline(mean(b), sd(b), col = "coral2")
+abline(mean(b), sd(b), col = "coral2", lwd=2)
 # iii)
 c = rchisq(170, 5)
 qqnorm(c, main = "iii) Normal QQ plot of chi-squared-distribution", cex.main=0.7, col = "cornflowerblue")
-abline(mean(c), sd(c), col = "coral2")
+abline(mean(c), sd(c), col = "coral2", lwd=2)
 # iv)
 d = runif(90, 4, 25)
 qqnorm(d, main = "iv) Normal QQ plot of uniform distribution", cex.main=0.7, col = "cornflowerblue")
-abline(mean(d), sd(d), col = "coral2")
+abline(mean(d), sd(d), col = "coral2", lwd=2)
 
 # 2.3 b
 par(mfrow=c(1,3))
@@ -405,11 +405,10 @@ ages = titanic$age
 sd_titanic=sd(ages, na.rm=TRUE)
 mean_titanic=summary(ages)[4] 
 
-# Add legends later
 hist(ages, breaks = 50, col = "blanchedalmond")
-qqnorm(ages, col = "darkgoldenrod1")
-qqline(ages, col = "red") 
-abline(as.numeric(mean_titanic), sd_titanic, col = "blue")
+qqnorm(ages, col = "darkgoldenrod3")
+qqline(ages, col = "red", lwd=2) 
+abline(as.numeric(mean_titanic), sd_titanic, col = "blue", lwd=2)
 
 boxplot(ages, col = "blanchedalmond", main = "Boxplot of ages")
 
@@ -421,9 +420,9 @@ sd_chol=sd(chol, na.rm=TRUE)
 mean_chol=summary(chol)[4]
 
 hist(chol, breaks =50, col = "blanchedalmond")
-qqnorm(chol, col = "darkgoldenrod1")
-qqline(chol, col = "red") 
-abline(as.numeric(mean_chol), sd_chol, col = "blue")
+qqnorm(chol, col = "darkgoldenrod3")
+qqline(chol, col = "red", lwd=2) 
+abline(as.numeric(mean_chol), sd_chol, col = "blue", lwd=2)
 
 boxplot(chol, col = "blanchedalmond", main = "Boxplot of chol")
 
@@ -435,9 +434,9 @@ sd_bwt=sd(bwt, na.rm=TRUE)
 mean_bwt=summary(bwt)[4]
 
 hist(bwt, breaks = 30, ylim = c(0, 50), col = "blanchedalmond")
-qqnorm(bwt, col = "darkgoldenrod1")
-qqline(bwt, col = "red")
-abline(as.numeric(mean_bwt), sd_bwt, col = "blue")
+qqnorm(bwt, col = "darkgoldenrod3")
+qqline(bwt, col = "red", lwd=2)
+abline(as.numeric(mean_bwt), sd_bwt, col = "blue", lwd=2)
 
 boxplot(bwt, col = "blanchedalmond", main = "Boxplot of bwt")
 
