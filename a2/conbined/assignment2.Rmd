@@ -275,7 +275,9 @@ abline(1.9444, 0, col = "brown1")
 text(850,2.5, paste0("Expected absolute difference=", 1.944), col = "brown1")
 ```
 
-    As the diagram illustrates, when the number of trails becomes larger, the absolute difference of two die rolls converge to the theoretically expected value of the absolute difference 1.9444.
+    As the diagram illustrates, when the number of trails becomes larger, the absolute 
+    difference of two die rolls converge to the theoretically expected value of the 
+    absolute difference 1.9444.
 
 ### b)
 
