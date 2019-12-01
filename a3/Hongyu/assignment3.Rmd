@@ -30,14 +30,18 @@ According to the problem, the standard deviation of the population is unknown. T
 
 ### 4) The observed value of the test statistic (the observed score);
 
-The observed value of test statistics is:
+Under the assumption that the null hypothesis is true:
 
 $$ 
 t = \frac{ (\bar{X}_1 - \bar{X}_2) - 0 }{ S_d/ \sqrt{n} } = -0.984
 $$
 
 ### 5) The P-value or the critical values;
-  Since we assume technology is not available now, so we only calculated the critical values -t~11,0.025~ =  -2.201 and t~11,0.025~ =  2.201
+  Since we assume technology is not available now, so we only calculated the critical values:
+  
+- `df` = n - 1 = 11
+  
+- -t~11,0.025~ =  -2.201 and +t~11,0.025~ =  +2.201
 
 ### 6) Whether or not the null hypothesis is rejected and why.
   Since t > -t~11,0.025~, the test statistics, therefore, is not in the critical region.
