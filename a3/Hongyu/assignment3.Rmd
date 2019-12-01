@@ -42,8 +42,9 @@ $$
 ### 6) Whether or not the null hypothesis is rejected and why.
   Since t > -t~11,0.025~, the test statistics, therefore, is not in the critical region.
   
-Thus, \
-- we fail to reject the null hypothesis;\
+Thus, 
+
+- we fail to reject the null hypothesis;
 - there is not enough evidence warrant the rejection of the claim that males aged 12-16 correctly report their heights.
 
 
@@ -120,7 +121,8 @@ Consequently, as mentioned in the problem, the $\sigma_1$ of sample vector `Alic
 #### (2) Rre-test
 
 ```{r echo=TRUE, out.width = '20%', out.height = '20%'}
-t.test(Alice, Bob, mu = 0, alternative = "two.sided", paired = FALSE, var.equal = FALSE, conf.level = 0.90)
+t.test(Alice, Bob, mu = 0, alternative = "two.sided", 
+       paired = FALSE, var.equal = FALSE, conf.level = 0.90)
 ```
 
 According to the results of the above t-test command with a new setting, we know that the p-value is 0.001. Since the p-value=0.001 < $\alpha$=0.01, our conclusions are the same as a):
@@ -145,6 +147,7 @@ prop.test(x = c(length(Alice[Alice>4]), length(Bob[Bob>4])),
 The results of the above two proportions test results in a p-value of 0.0002 which is smaller than the significance level $\alpha$ = 0.05.
 
 Therefore, our conclusions are as follows:
+
 - We reject the null hypothesis;
 - There is sufficient evidence to support the claim that the proportion of evenings on which she worked more than 4 hours is larger than the proportion of evenings on which Bob worked more than 4 hours.
 
