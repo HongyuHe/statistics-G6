@@ -41,7 +41,9 @@ $$
   
 - `df` = n - 1 = 11
   
-- -t~11,0.025~ =  -2.201 and +t~11,0.025~ =  +2.201
+- -2.718 < -t~11,0.025~ <  -2.201 
+
+- +2.201 < +t~11,0.025~ <  +2.718
 
 ### 6) Whether or not the null hypothesis is rejected and why.
   Since t > -t~11,0.025~, the test statistics, therefore, is not in the critical region.
@@ -55,6 +57,7 @@ Thus,
 ## Exercise 3.2 (Section 6.2, E32)
 
 According to the problem, we know that 
+
 - E = 0.03
 - Confidence level = 99%
 - $\hat{p}$ = 15%
@@ -66,14 +69,15 @@ Therefore,
 
 and so
 
-- $Z_\alpha/2$ = 0.5199
+- $Z_\alpha/2$ = 2.575
 
 Thus, the sample size is
 
 $$
-\begin{aligned} n &=\frac{\left[z_{\alpha / 2}\right]^{2} \hat{p} \hat{q}}{E^{2}}=\frac{[0.5199]^{2}(0.15)(0.85)}{0.03^{2}} \\ &=38.291=39 \end{aligned}
+\begin{aligned} n &=\frac{\left[z_{\alpha / 2}\right]^{2} \hat{p} \hat{q}}{E^{2}}=\frac{[2.575]^{2}(0.15)(0.85)}{0.03^{2}} \\ &=939.34 \geq 940 \end{aligned}
 $$
 
+Therefore, the sample size n should be greater or equal to 940.
 
 # & R-exercises
 
