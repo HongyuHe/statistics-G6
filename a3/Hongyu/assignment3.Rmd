@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Exercise 3.1 (Section 8.4, E16)
 
-Based on the setting of this problem, the two samples are two dependent samples (Matched Pairs). Therefore, their population deviations $\sigma_1$ and $\sigma_2$ are considered to be the same.
+Based on the setting of this problem, the two samples are **two dependent samples** (Matched Pairs). Therefore, their **population deviations** $\sigma_1$ and $\sigma_2$ are considered to be the same.
 
 ### 1) The hypotheses in terms of the population parameter of interest:
 
@@ -22,31 +22,31 @@ Based on the setting of this problem, the two samples are two dependent samples 
 
 ### 2) The significance level: 
 
-- $\alpha$ = 5%
+- $\alpha$ = 5% (two-sided)
 
 ### 3) The test statistic and its distribution under the null hypothesis:
 
-According to the problem, the standard deviation of the population is unknown. Therefore, in this test, we replace it by the estimator S~d~. The test statistics has t-distribution with (n-1 = 11) degrees of freedom.
+According to the problem, the standard deviation of the population is **unknown**. Therefore, in this test, we replace it by the estimator S~d~. The test statistic (two-tailed) has t-distribution with (n-1 = 11) degrees of freedom (`fd`).
 
 ### 4) The observed value of the test statistic (the observed score);
 
 Under the assumption that the null hypothesis is true:
 
 $$ 
-t = \frac{ (\bar{X}_1 - \bar{X}_2) - 0 }{ S_d/ \sqrt{n} } = -0.984
+t =\frac{\bar{d}-\mu_{d}}{\frac{s_{d}}{\sqrt{n}}} = \frac{ (\bar{X}_1 - \bar{X}_2) - 0 }{ S_d/ \sqrt{n} } = -0.984
 $$
 
-### 5) The P-value or the critical values;
-  Since we assume technology is not available now, so we only calculated the critical values:
+### 5) The P-value or the critical values
+  Since we assume technology is not available now, so we hereby only calculated the **critical values**:
   
 - `df` = n - 1 = 11
   
-- -2.718 < -t~11,0.025~ <  -2.201 
+- $-$ 2.718 < $-$ t~11,0.025~ < $-$ 2.201 (Tech: $-$ t~11,0.025~ = $-$ 2.200985)
 
-- +2.201 < +t~11,0.025~ <  +2.718
+- $+$ 2.201 < $+$ t~11,0.025~ < $+$ 2.718 (Tech: $+$ t~11,0.025~ = $+$ 2.200985)
 
 ### 6) Whether or not the null hypothesis is rejected and why.
-  Since t > -t~11,0.025~, the test statistics, therefore, is not in the critical region.
+  Since t > $-$ t~11,0.025~ (Tech: > $-$ 2.200985), the test statistics, therefore, is not in the critical region.
   
 Thus, 
 
@@ -77,7 +77,7 @@ $$
 \begin{aligned} n &=\frac{\left[z_{\alpha / 2}\right]^{2} \hat{p} \hat{q}}{E^{2}}=\frac{[2.575]^{2}(0.15)(0.85)}{0.03^{2}} \\ &=939.34 \geq 940 \end{aligned}
 $$
 
-Therefore, the sample size n should be greater or equal to 940.
+Therefore, the **sample size** n should be greater or equal to **940**.
 
 # & R-exercises
 
@@ -93,50 +93,141 @@ t.test(Alice, Bob, mu = 0, alternative = "two.sided", paired=TRUE, conf.level = 
 ```
 According to the above results:
 
-- An estimate for the difference of mean working time per evening of Alice and Bob: 0.2689
-- A 95% confidence interval for the difference of mean working
-time per evening of Alice and Bob: [0.1142398, 0.4235934]
+- An **estimate** for the difference of mean working time per evening of Alice and Bob: **0.2689**
+- A 95% confidence interval for the difference of mean working time per evening of Alice and Bob: **[0.1142398, 0.4235934]**
 
 ### b)
+
+#### b1) R command and results:
 
 ```{r echo=TRUE, out.width = '20%', out.height = '20%'}
 t.test(Alice, Bob, mu = 0, alternative = "two.sided", paired = TRUE, conf.level = 0.90)
 ```
 
-According to the results of above the t-test command, we know that the p-value is 0.001. Since the p-value=0.001 < $\alpha$=0.01, our conclusions are as follows:
+#### b2) The hypotheses in terms of the population parameter of interest:
+
+- H~0~: $\mu$~d~ = 0; (original claim)
+- H~a~: $\mu$~d~ $\neq$ 0;
+
+#### b3) The significance level: 
+
+- $\alpha$ = 10%
+
+#### b4) The test statistic and its distribution under the null hypothesis:
+
+- two-tailed test;
+- two dependent samples (Matched Pairs);
+- the test statistic is under a t-distribution.
+
+#### b5) The observed value of the test statistic (the observed score);
+
+Under the assumption that the null hypothesis is true, the test statistic is 3.4938.
+
+#### b6) The P-value
+
+- P-value = 0.00102
+
+#### b7) Conclusions
+
+According to the results of above the t-test command, we know that the **p-value** is **0.001**. 
+
+Since the **p-value=0.001 < $\alpha$=0.01**, our conclusions are as follows:
 
 - reject the null-hypothesis;
 - there is sufficient evidence to warrant rejection of the claim that on average Alice and Bob both work the same amount of time.
 
 ### c)
 
+#### c1) R command and results:
+
 ```{r echo=TRUE, out.width = '20%', out.height = '20%'}
 t.test(Alice, Bob, mu = 0, alternative = "greater", paired = TRUE, conf.level = 0.90)
 ```
 
-According to the results of the above t-test command, we know that the p-value is 0.0005. Since the p-value=0.0005 < $\alpha$=0.01, our conclusions are as follows:
+#### c2) The hypotheses in terms of the population parameter of interest:
+
+- H~0~: $\mu$~d~ = 0; 
+- H~a~: $\mu$~d~ $>$ 0; (original claim)
+
+#### c3) The significance level: 
+
+- $\alpha$ = 10%
+
+#### c4) The test statistic and its distribution under the null hypothesis:
+
+- right-tailed test;
+- two dependent samples (Matched Pairs);
+- the test statistic is under a t-distribution.
+
+#### c5) The observed value of the test statistic (the observed score);
+
+Under the assumption that the null hypothesis is true, the test statistic is 3.4938.
+
+#### c6) The P-value
+
+- P-value = 0.0005101
+
+#### c7) Conclusions
+
+According to the results of the above t-test command, we know that the **p-value** is **0.0005**. 
+
+Since the **p-value=0.0005 < $\alpha$=0.01**, our conclusions are as follows:
 
 - reject the null-hypothesis;
 - there is sufficient evidence to support the claim that Alice works, on average, much more than Bob.
+
 
 ### d)
 
 #### (1) Changes
 
-Yes, because this time the data contained in *Assign3.RData* is no longer a dependent (matched pairs) sample in the sense that the data of Alice and Bob correspond to different workdays. 
+Yes, because this time the data contained in *Assign3.RData* **is no longer a dependent (matched pairs) sample** in the sense that the data of `Alice` and `Bob` correspond to different workdays. 
+
 Consequently, as mentioned in the problem, the $\sigma_1$ of sample vector `Alice` and the $\sigma_2$ of sample vector `Bob` is different. 
 
 #### (2) Rre-test
+
+##### d1) R command and results:
 
 ```{r echo=TRUE, out.width = '20%', out.height = '20%'}
 t.test(Alice, Bob, mu = 0, alternative = "two.sided", 
        paired = FALSE, var.equal = FALSE, conf.level = 0.90)
 ```
 
-According to the results of the above t-test command with a new setting, we know that the p-value is 0.001. Since the p-value=0.001 < $\alpha$=0.01, our conclusions are the same as a):
+
+##### d2) The hypotheses in terms of the population parameter of interest:
+
+- H~0~: $\mu$~d~ = 0; (original claim)
+- H~a~: $\mu$~d~ $\neq$ 0;
+
+##### d3) The significance level: 
+
+- $\alpha$ = 10%
+
+##### d4) The test statistic and its distribution under the null hypothesis:
+
+- two-tailed test;
+- two independent samples;
+- $\sigma_1 \ and\ \sigma_2$ unknown and we assume that $\sigma_1 \neq\sigma_2$;
+- the test statistic is under a t-distribution.
+
+##### d5) The observed value of the test statistic (the observed score);
+
+Under the assumption that the null hypothesis is true, the test statistic is 3.3647.
+
+##### d6) The P-value
+
+- P-value = 0.001256;
+
+##### d7) Conclusions
+
+According to the results of the above t-test command with a new setting, we know that the p-value is 0.001. 
+
+Since the **p-value=0.001 < $\alpha$=0.01**, our conclusions are the same as a):
 
 - reject the null-hypothesis;
 - there is sufficient evidence to warrant rejection of the claim that on average Alice and Bob both work the same amount of time.
+
 
 ## Exercise 3.4
 
@@ -147,12 +238,44 @@ A **point estimate** that we obtained for the difference in the proportion of ev
 
 ### b)
 
+#### b1) R command and results:
+
 ```{r echo=TRUE, out.width = '20%', out.height = '20%'}
 prop.test(x = c(length(Alice[Alice>4]), length(Bob[Bob>4])), 
           n = c(50, 50), alternative = "greater", conf.level = 0.95)
 ```
 
-The results of the above two proportions test results in a p-value of 0.0002 which is smaller than the significance level $\alpha$ = 0.05.
+#### b2) The hypotheses in terms of the population parameter of interest:
+
+- H~0~: $\mu$~d~ = 0; 
+- H~a~: $\mu$~d~ $>$ 0; (original claim)
+
+#### b3) The significance level: 
+
+- $\alpha$ = 5%
+
+#### b4) The test statistic and its distribution under the null hypothesis:
+
+- right-tailed;
+- two independent samples;
+- the test statistic is under a t-distribution.
+
+#### b5) The observed value of the test statistic (the observed score);
+
+Under the assumption that the null hypothesis is true:
+
+- the pooled sample proportion: $\bar{p}=\frac{x_{1}+x_{2}}{n_{1}+n_{2}} = 0.62$
+
+- the test statistic:
+$z=\frac{\left(\hat{p}_{1}-\hat{p}_{2}\right)-\left(p_{1}-p_{2}\right)}{\sqrt{\frac{\bar{p} \bar{q}}{n_{1}}+\frac{\bar{p} \bar{q}}{n_{2}}}} = 3.708$.
+
+#### b6) The P-value
+
+- P-value = 0.0002306
+
+#### b7) Conclusions
+
+The results of the above two proportions test results in a **p-value** of **0.0002** which is **smaller than** the significance level **$\alpha$ = 0.05**.
 
 Therefore, our conclusions are as follows:
 
@@ -160,20 +283,25 @@ Therefore, our conclusions are as follows:
 - There is sufficient evidence to support the claim that the proportion of evenings on which she worked more than 4 hours is larger than the proportion of evenings on which Bob worked more than 4 hours.
 
 
-
-
-```{r echo=FALSE, out.width = '60%', out.height = '50%'}
-
-```
-```{r echo=FALSE, out.width = '60%', out.height = '50%'}
-
-```
-
-
 # *Appendix*
 ```r
+#E3.1
+qt(0.05/2, 11)
+abs(qt(0.05/2, 11))
+
 # E3.3
 load("Assign3.RData")
+
+# a)
+alice_propotion = mean(Alice > 4)
+bob_propotion = mean(Bob > 4)
+
+point_estimate = alice_propotion - bob_propotion
+
+# b)
+pooled_p = (length(Alice[Alice>4]) + length(Bob[Bob>4])) / (50*2)
+
+test_statistic = (alice_propotion - bob_propotion) / sqrt(2*pooled_p*(1-pooled_p) / 50)
 ```
 
 
