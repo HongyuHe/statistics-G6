@@ -289,7 +289,7 @@ Therefore, our conclusions are as follows:
 qt(0.05/2, 11)
 abs(qt(0.05/2, 11))
 
-# E3.3
+# E3.4
 load("Assign3.RData")
 
 # a)
