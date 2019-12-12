@@ -368,7 +368,7 @@ The test statistic is under a known discrete distribution: a hypergeometric dist
 
 #### f6) whether or not the null hypothesis is rejected and why.
 
-- The expected value of this random variable is $\frac{m k}{N}=\frac{35 \cdot 39}{63} = 15.476 < 27$
+- The expected value of this random variable is $\frac{m k}{N}=\frac{35 \cdot 39}{63} = 15.476 < 27$ (O~11~ is indeed larger than its expected value);
 
 - $\alpha = 0.01 >p-value =0.005644$
 
@@ -416,11 +416,12 @@ qqnorm(lmCrime$res,main="Normal Q-Q plot of residuals", col = "red")
 plot(crimeData$income,lmCrime$res,ylab="Residuals", xlab="Incomes of student's parents",
 main="Residual plot", col="blue")
 
+
 # E4.4
 
 # d)
 o11=8; o12=12; o13=15; o21=16; o22=8; o23=4;
-result = c(o11, o12, o13, o21, o22, o23) # the 
+result = c(o11, o12, o13, o21, o22, o23) # the result matrix
 soccer=matrix(result,nrow=2,byrow=T);
 
 chisq.test(soccer)$exp # check the requirement of chi-test
